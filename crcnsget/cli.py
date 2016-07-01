@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
 
 import click
+import crcnsget
 
 @click.command()
-def main(args=None):
+@click.option('--username', prompt='Your crcns.org username',
+              help='Your crcns.org username.')
+@click.option('--password', prompt='Your crcns.org password',
+              help='Your crcns.org password.',
+              hide_input=True)
+@click.option('--dataset', prompt='Path to a crcns.org dataset',
+              help='Your crcns.org dataset.')
+def main(username,password,dataset):
     """Console script for crcnsget"""
-    click.echo("Replace this message by putting your code into "
-                "crcnsget.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
-
+    crcnsget.download(dataset,username,password)
 
 if __name__ == "__main__":
     main()
