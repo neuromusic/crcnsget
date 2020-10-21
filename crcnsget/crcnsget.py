@@ -20,4 +20,4 @@ def download(datafile,username,password):
             for chunk in r.iter_content(chunk_size=1024):
                 if chunk:
                     f.write(chunk)
-        print local_filename
+        print(local_filename)
