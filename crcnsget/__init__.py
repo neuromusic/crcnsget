@@ -3,3 +3,4 @@
 __author__ = 'Justin Kiggins'
 __email__ = 'justin.kiggins@gmail.com'
 __version__ = '0.1.0'
+from .crcnsget import download
