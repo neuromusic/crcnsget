@@ -54,6 +54,15 @@ For example,
 
 Will download the from the `data_structure_ANM218457.tar.gz` file from the `alm-1` dataset.
 
+In case of getting error of "AttributeError: module 'crcnsget' has no attribute 'download'", here is an alternative way to download the dataset.
+
+.. code-block:: console
+
+        $ git clone https://github.com/neuromusic/crcnsget.git
+        $ cd crcnsget
+        $ pip install -e .
+        $ crcnsget --username <username> --dataset <path to dataset>
+
 Credits
 ---------
 
